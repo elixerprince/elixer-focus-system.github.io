@@ -1,0 +1,21 @@
+header {
+  background-image: url('../Images/goals-banner.avif');
+}
+
+.goal {
+  font-weight: bold;
+}
+
+.remove-goal {
+  color: rgb(221, 0, 0);
+}
+
+.remove-goal:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: decimal;
+  margin: 10px 0;
+}

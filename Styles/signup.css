@@ -1,0 +1,69 @@
+body {  
+    width: 100vw;
+    height: 100vh;
+    background: url('../Images/signup-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 80px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(2px);
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+form input {
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+}
+
+#signup-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+#signup-btn:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+}
+#signup-btn:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* PHONE STYLES */
+@media screen and (max-width: 500px){
+    form {
+        padding: 20px;
+    }
+}

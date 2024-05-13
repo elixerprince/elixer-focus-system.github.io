@@ -1,0 +1,24 @@
+header {
+  background-image: url('../Images/tasks-banner.jpeg');
+}
+
+.task-checkbox {
+  margin-right: 10px;
+}
+
+.task {
+  font-weight: bold;
+}
+
+.remove-task {
+  color: rgb(221, 0, 0); /* Make the text red */
+}
+.remove-task:hover {
+  text-decoration: underline; /* Add underline when hovered */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+li {
+  display: flex;
+  margin: 15px 0;
+}

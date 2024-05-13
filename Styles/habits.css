@@ -1,0 +1,46 @@
+header {
+  background-image: url('../Images/habits-banner.jpg');
+}
+
+.habit {
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.count {
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  border: 2px solid rgb(32, 32, 32);
+  padding: 2px 10px;
+  margin: 0 10px;
+}
+
+.counter {
+  font-size: 12px;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  color: white;
+  background-color: rgb(32, 32, 32);
+  border-radius: 2px;
+  padding: 6px 10px;
+}
+.counter:hover {
+  background-color: rgb(75, 75, 75);
+}
+
+.remove-habit {
+  margin-left: 6px;
+  color: rgb(221, 0, 0);
+}
+.remove-habit:hover {
+  cursor: pointer; 
+  text-decoration: underline;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  list-style-type: none;
+}

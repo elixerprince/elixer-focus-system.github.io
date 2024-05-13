@@ -1,0 +1,11 @@
+header, #pomodoro-timer {
+  background-image: url('../Images/pomodoro-banner.jpg');
+}
+
+/* POMODORO START BUTTON */
+#start-btn:hover {
+  background-color: rgb(211, 74, 0);
+}
+#start-btn:active {
+  background-color: rgba(211, 74, 0, .75);
+}

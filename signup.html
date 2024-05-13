@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Elixer Prince">
+        <meta name="description" content="This is the signup page for the website.">
+        <title>
+            EFS | Sign Up
+        </title>
+        <link rel="icon" href="Images/elixerfocus-favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="Styles/main.css">
+        <link rel="stylesheet" href="Styles/signup.css">
+        <script src="https://kit.fontawesome.com/acb9a84b32.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <main>
+            <form method="post" action="home.html">
+                <a href="signup.html">
+                    <img src="Images/elixerfocus-favicon.png" alt="Elixer Logo" id="logo">
+                </a>
+                <h1 id="signup-header">
+                    Elixer | Signup
+                </h1>
+                <div id="signup-form">
+                    <div class="input-container">
+                        <input type="text" name="fname" id="first-name" class="input-field" placeholder="First Name" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="lname" id="last-name" class="input-field" placeholder="Last Name" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" id="email" class="input-field" placeholder="Email" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password" id="password" class="input-field" placeholder="Enter Password" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="confirm-password" id="confirm-password" 
+                        class="input-field" placeholder="Re-enter Password" required>
+                    </div>
+                    <button id="signup-btn" type="submit">
+                        Sign Up
+                    </button>
+                </div>
+            </form>
+        </main>
+
+        <script src="/Scripts/signup.js"></script>
+    </body>
+</html>
