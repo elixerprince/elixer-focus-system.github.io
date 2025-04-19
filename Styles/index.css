@@ -41,34 +41,37 @@
   margin-bottom: 1rem;
 }
 
-#faq-section {
+.faq-section {
   flex-direction: column;
   align-items: center;
   padding: 1.25rem 1.25rem 3.75rem 1.25rem;
   background-color: var(--color-black);
   color: var(--color-white);
 }
-#faq-questions {
+
+.faq-section__questions-container {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  max-width: 800px;
 }
-.question {
+
+.faq-section__question {
   text-align: left;
   padding: 20px;
   list-style-type: none;
   border-radius: 16px 0 0 16px;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 }
-.question:hover {
-  background-color: white;
-  color: black;
-}
-.question-text {
+
+.faq-section__question-text {
   cursor: pointer;
   display: inline-block;
 }
-.answer {
+
+.faq-section__question-answer {
   display: none;
   padding: 20px;
   border-radius: 0 16px 16px 0;

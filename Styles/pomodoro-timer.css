@@ -1,11 +1,22 @@
-header, #pomodoro-timer {
-  background-image: url('../Images/pomodoro-banner.jpg');
+.header,
+.timer {
+  background-image: url("../img/pomodoro-banner.jpg");
 }
 
-/* POMODORO START BUTTON */
-#start-btn:hover {
-  background-color: rgb(211, 74, 0);
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
 }
-#start-btn:active {
-  background-color: rgba(211, 74, 0, .75);
+
+/* START BUTTON */
+.start-button:hover {
+  background-color: rgb(211, 74, 0);
+
+  &:active {
+    background-color: rgba(211, 74, 0, 0.75);
+  }
 }

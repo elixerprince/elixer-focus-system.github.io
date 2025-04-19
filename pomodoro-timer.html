@@ -1,143 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Elixer Prince">
-    <meta name="description" content="This is a regular pomodoro timer.">
-    <title>
-      EFS | Pomodoro Timer
-    </title>
-    <link rel="icon" href="Images/elixerfocus-favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="Styles/main.css">
-    <link rel="stylesheet" href="Styles/timers.css">
-    <link rel="stylesheet" href="Styles/pomodoro-timer.css">
-    <script src="https://kit.fontawesome.com/acb9a84b32.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Elixer Prince" />
+    <meta
+      name="description"
+      content="Welcome to the Elixer Focus website, where passion meets productivity!" />
+    <title>Elixer Focus</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="img/elixerfocus-favicon.png" type="image/x-icon" />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="styles/_main.css" />
+    <link rel="stylesheet" href="styles/timers.css" />
+    <link rel="stylesheet" href="styles/pomodoro-timer.css" />
+
+    <!-- CUSTOM JS -->
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/pomodoro-timer.js" defer></script>
   </head>
 
   <body>
-
-    <header>
-      <nav id="top-navbar">
-        <div id="logo-container">
-          <a href="home.html">
-            <img src="Images/elixerfocus-logo.png" id="site-logo" alt="ElixerFocus Logo">
+    <header class="header">
+      <!-- NAVBAR -->
+      <nav id="navbar" class="navbar select-none">
+        <a href="/">
+          <img
+            class="navbar__logo"
+            src="img/elixerfocus-logo.png"
+            alt="Elixer Focus Logo" />
+        </a>
+        <div class="navbar__right-container">
+          <ul class="navbar__page-links-container">
+            <li>
+              <a class="navbar__page-link" href="efs-timer.html">
+                <i class="fa-regular fa-clock"></i>
+                EFS
+              </a>
+            </li>
+            <li>
+              <a class="navbar__page-link" href="pomodoro-timer.html">
+                <i class="fa-regular fa-clock"></i>
+                POMODORO
+              </a>
+            </li>
+            <li>
+              <a class="navbar__page-link" href="habits.html">
+                <i class="fa-solid fa-brain"></i>
+                HABITS
+              </a>
+            </li>
+            <li>
+              <a class="navbar__page-link" href="tasks.html">
+                <i class="fa-solid fa-list-check"></i>
+                TASKS
+              </a>
+            </li>
+            <li>
+              <a class="navbar__page-link" href="goals.html">
+                <i class="fa-solid fa-bullseye"></i>
+                GOALS
+              </a>
+            </li>
+          </ul>
+          <a class="button navbar__sign-up-button" href="/signup.html">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            SIGN UP
           </a>
         </div>
-        <ul id="nav-container">
-          <li>
-            <a href="home.html" class="home-page">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="efs-timer.html" class="efs-page">
-              EFS Timer
-            </a>
-          </li>
-          <li>
-            <a href="#" class="pomo-page" id="current-page" style="color: black; background-color: white;">
-              Pomodoro Timer
-            </a>
-          </li>
-          <li>
-            <a href="habits.html" class="habit-page">
-              Habits
-            </a>
-          </li>
-          <li>
-            <a href="tasks.html" class="task-page">
-              Tasks
-            </a>
-          </li>
-          <li>
-            <a href="goals.html" class="goal-page">
-              Goals
-            </a>
-          </li>
-          <li>
-            <button id="signup-btn">
-              Sign Up
-            </button>
-          </li>
-        </ul>
       </nav>
-      <div id="page-info">
-        <h1 id="page-title">
-          POMODORO TIMER
+      <div class="header__text-container">
+        <h1 class="header__intro">
+          Experience increased productivity, better time management, and
+          improved focus with our easy-to-use website. Streamline your tasks,
+          track your time, set goals, and build positive habits all in one
+          place.
         </h1>
       </div>
     </header>
 
     <main>
-      <audio id="timer-beep" src="Audio/Beep - Sound Effect (320).mp3"></audio>
-      <audio id="pomo-lofi" src="Audio/25 Minute Timer Lofi.mp3"></audio>
-      <div id="pomodoro-timer">
-        25:00
-      </div>
-      <div id="timer-controls">
-        <button id="start-btn">
-          Start
-        </button>
-        <button id="pause-btn">
-          Pause
-        </button>
-        <button id="stop-btn">
-          Stop
-        </button>
-      </div>
+      <section class="timer-container select-none">
+        <div id="pomodoro-timer" class="timer">25:00</div>
+        <div id="timer-controls">
+          <button id="start-btn" class="button start-button">Start</button>
+          <button id="pause-btn" class="button">Pause</button>
+          <button id="stop-btn" class="button">Stop</button>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <nav id="bottom-nav">
-        <p>
-          Optimize your productivity, time management, and focus.
-        </p>
-        <div id="foot-pages">
-          <a href="home.html" class="bottom-nav-link">
-            Home
-          </a>
-          <span>|</span>
-          <a href="efs-timer.html" class="bottom-nav-link">
-            EFS Timer
-          </a>
-          <span>|</span>
-          <a href="#" class="bottom-nav-link">
-            Pomodoro Timer
-          </a>
-          <span>|</span>
-          <a href="habits.html" class="bottom-nav-link">
-            Habits
-          </a>
-          <span>|</span>
-          <a href="tasks.html" class="bottom-nav-link">
-            Tasks
-          </a>
-          <span>|</span>
-          <a href="goals.html" class="bottom-nav-link">
-            Goals
-          </a>
-        </div>
-        <div>
-          <a href="https://www.facebook.com" class="social-media">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="https://www.twitter.com" class="social-media">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com" class="social-media">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-      </nav>
-      <div id="to-top-container">
-        <a href="#" id="to-top">
-          Back to Top
-        </a>
+    <footer class="footer">
+      <p class="footer__title">
+        Optimize your productivity, time management, and focus.
+      </p>
+      <div class="footer__right-container">
+        <ul class="footer__page-links-container">
+          <li>
+            <a class="footer__page-link" href="/">Home</a>
+          </li>
+          <li>
+            <a class="footer__page-link" href="/efs-timer.html">EFS Timer</a>
+          </li>
+          <li>
+            <a class="footer__page-link" href="/pomodoro-timer.html">
+              Pomodoro Timer
+            </a>
+          </li>
+          <li>
+            <a class="footer__page-link" href="/habits.html">Habits</a>
+          </li>
+          <li>
+            <a class="footer__page-link" href="/tasks.html">Tasks</a>
+          </li>
+          <li>
+            <a class="footer__page-link" href="/goals.html">Goals</a>
+          </li>
+        </ul>
+        <ul class="footer__social-links-container">
+          <li>
+            <a href="https://www.facebook.com" class="social-media">
+              <i class="footer__social-link fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" class="social-media">
+              <i class="footer__social-link fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" class="social-media">
+              <i class="footer__social-link fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+        <a class="button footer__back-to-top-button" href="#">BACK TO TOP</a>
       </div>
     </footer>
-
-    <script src="Scripts/main.js"></script>
-    <script src="Scripts/pomodoro-timer.js"></script>
   </body>
 </html>

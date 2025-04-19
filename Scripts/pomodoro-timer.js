@@ -3,10 +3,18 @@ let time = startTime * 60; // Time in seconds
 let timerInterval;
 let isClockRunning = false;
 
+// Create an Audio object for the timer sound
+const timerSound = new Audio("/audio/Beep - Sound Effect (320).mp3"); // Replace with the actual path to your sound file
+
+// Create an Audio object for the background music
+const music = new Audio("/audio/25 Minute Timer Lofi.mp3"); // Replace with the actual path to your music file
+
 function updateTimer() {
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
-  document.getElementById('pomodoro-timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  document.getElementById("pomodoro-timer").textContent = `${minutes
+    .toString()
+    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
   time--;
   if (time <= 0) {
     clearInterval(timerInterval);
@@ -17,14 +25,12 @@ function updateTimer() {
 }
 
 function playTimerSound() {
-  const timerSound = document.getElementById('timer-beep');
   timerSound.play();
 }
 
-const music = document.getElementById('pomo-lofi');
 function startTimerMusic() {
-  setTimeout(function() {
-      music.play(); // Start playing the audio
+  setTimeout(function () {
+    music.play(); // Start playing the audio
   }, 1000); // Delay in milliseconds
 }
 
@@ -37,7 +43,7 @@ function stopMusic() {
   music.currentTime = 0; // Resets the audio to the beginning
 }
 
-document.getElementById('start-btn').addEventListener('click', () => {
+document.getElementById("start-btn").addEventListener("click", () => {
   if (isClockRunning === false) {
     timerInterval = setInterval(updateTimer, 1000);
     alert("Press OK to start the timer!");
@@ -47,12 +53,11 @@ document.getElementById('start-btn').addEventListener('click', () => {
   isClockRunning = true; // Sets the clock to running which prevents spamming
 });
 
-document.getElementById('pause-btn').addEventListener('click', () => {
+document.getElementById("pause-btn").addEventListener("click", () => {
   if (isClockRunning === false) {
     alert("The timer is not running!");
     return;
-  }
-  else {
+  } else {
     clearInterval(timerInterval);
     isClockRunning = false;
     pauseMusic();
@@ -60,21 +65,19 @@ document.getElementById('pause-btn').addEventListener('click', () => {
   }
 });
 
-document.getElementById('stop-btn').addEventListener('click', () => {
+document.getElementById("stop-btn").addEventListener("click", () => {
   if (isClockRunning === true || time < startTime * 60) {
     const confirmStop = confirm("Are you sure you want to stop the timer?");
     if (!confirmStop) {
       return;
-    }
-    else {
+    } else {
       clearInterval(timerInterval);
       time = startTime * 60; // Reset time to 25 minutes
       updateTimer();
       stopMusic();
       isClockRunning = false;
     }
-  }
-  else {
+  } else {
     alert("The timer is not running!");
   }
 });

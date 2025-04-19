@@ -1,5 +1,5 @@
-header {
-  background-image: url('../Images/tasks-banner.jpeg');
+.header {
+  background-image: url("../img/tasks-banner.jpeg");
 }
 
 .task-checkbox {
@@ -11,7 +11,7 @@ header {
 }
 
 .remove-task {
-  color: rgb(221, 0, 0); /* Make the text red */
+  color: rgb(221, 0, 0);
 }
 .remove-task:hover {
   text-decoration: underline; /* Add underline when hovered */
